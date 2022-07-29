@@ -1,0 +1,82 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link#bootstrap-css(href='/bootstrap/css/bootstrap.css', rel='stylesheet')
+    link(href='/style.css' rel="stylesheet")
+  body
+    .container
+      .row.centered-form
+        .panel-heading
+        .col-xs-12.col-sm-8
+          .panel.panel-default
+            .panel-body
+              img(src='/images/header-images/form-header-image.png')
+              p.virus Ministry of Health
+              p.virus COVID-19(CORONA VIRUS)
+              p.virus Virus - Test Registration Form
+              form(name='registration' action='/' method="POST")
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Surname
+                      input#first_name.form-control.input-sm(type='text', name='surname_name', onblur="surnameVal(this, errorname)")
+                      
+                      span#errorname
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Given Name:
+                      input#given_name.form-control.input-sm(type='text', name='last_name',  onblur="lastnameVal(this, errorlast)")
+                      span#errorlast
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Date of Birth:
+                      input#dob.form-control.input-sm(type='date', name='dob', onblur="dateVal(this, errordate)")
+                      span#errordate
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Place of Residence
+                      input#residence.form-control.input-sm(type='text', name='residence',  onblur="residenceVal(this, errorresidence)")
+                      span#errorresidence
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Occupation
+                      input#occupation.form-control.input-sm(type='text', name='occupation', onblur="occupationVal(this, errorroccupation)")
+                      span#errorroccupation
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Nationality
+                      input#nationality.form-control.input-sm(type='text', name='nationality', onblur="nationalVal(this, errornational)")
+                      span#errornational
+                .col
+                  .form-group
+                    label Gender
+                    
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      input(type='radio', value='sex', name='male', required )
+                      | Male
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      input(type='radio', value='', name='female')
+                      | Female
+                  .col-xs-6.col-sm-6.col-md-6
+                    label Category
+                    .form-group
+                      select.form-select(onblur="categoryVal(errorcategory)" name='category')
+                        option(name='default') select option
+                        option(name='home') Home
+                        option(name='away') Away
+                        option(name='outreach') Outreach
+                      span#errorcategory
+                      br
+                    input.btn.btn-info.btn-block(type='submit', value='Register')
+
+    script(src="/bootstrap/js/bootstrap.js")
+    script(src='/validation/form.js')
