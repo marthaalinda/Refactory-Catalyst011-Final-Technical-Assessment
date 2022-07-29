@@ -1,0 +1,89 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  // bootstrap
+  // CSS only
+  link(href='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css' rel='stylesheet' integrity='sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx' crossorigin='anonymous')
+  link(rel='stylesheet' href='/css/style.css')
+  title CovidTestForm
+form(action='/' method='POST' name='covidForm' onsubmit='return validInput()')
+  .form-container.text-center
+    // image logo
+    .logo.text-center
+      img(src='/images/logo.png' alt='')
+    .title.text-center
+      h5 Ministry of Health
+      h4 COVID-19 (CORONA VIRUS)
+      h5 Virus Test Registration Form
+    // input field rows
+    .row.text-center.inputRow
+      .col.col-sm-6
+        label(for='surname') Surname
+        br
+        input(name='surname' type='text' onblur='validSname()')
+        br
+        small#err1.showError
+      .col.col-sm-6
+        label(for='givenName') Given Name
+        br
+        input(name='givenName' type='text' onblur='validGname()')
+        br
+        small#err2.showError
+    // row 2
+    .row.text-center.inputRow
+      .col.col-sm-6
+        label(for='dob') Date of Birth
+        br
+        input.dob(name='dob' type='date' required='' onblur='validDOB()')
+        small#err10.showError
+      .col.col-sm-6
+        label#residence(for='residence') Place of Residence
+        br
+        input(name='residence' type='text' onblur='validResidence()')
+        br
+        small#err3.showError
+    // row 3
+    .row.text-center.inputRow
+      .col.col-sm-6
+        label(for='job') Occupation
+        br
+        input.job(name='job' type='text' onblur='validOccupation()')
+        br
+        small#err4.showError
+      .col.col-sm-6
+        label(for='nationality') Nationality
+        br
+        input(name='nationality' type='text' onblur='validNationality()')
+        br
+        small#err5.showError
+    // row 4
+    .row.text-center
+      .col
+        small#err6.showError
+        label#malerad.radlabel(for='male') Male
+        input.form-check-input.radbtn(name='gender' checked required ="" type='radio' value='male' onblur='validGender()')
+        br
+        small#err8.showError
+      .col
+        label.radlabel(for='female') Female
+        input.form-check-input.radbtn(name='gender' required='' type='radio' value='female')
+    // row 5
+    .row
+      label.catlabel(for='category') Category
+      select#cat(name='category' onblur='validCat()')
+        option(value='default') Select Category
+        option(value='cat1') Returnee
+        option(value='cat2') Contact
+        option(value='cat1') Alert
+        option(value='cat2') Volunteer
+      br
+      small#err7.showError
+    // button
+    .but
+      button#regbtn.btn.btn-primary(name='regbtn' type='submit') Register
+// JavaScript Bundle with Popper
+script(src='https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js')
+script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js' integrity='sha384-A3rJD856KowSb7dwlZdYEkO39Gagi7vIsF0jrRAoQmDKKtQBHUuLZ9AsSv4jD4Xa' crossorigin='anonymous')
+script(src='/js/javascript.js')
