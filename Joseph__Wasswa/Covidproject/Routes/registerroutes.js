@@ -14,6 +14,7 @@ router.post('/register', async(req,res)=>{
         await covid.save()
         res.redirect('/register')
         console.log(req.body)
+        
     }
     catch(err){
         res.status(400).render('index')
