@@ -14,6 +14,7 @@ const validation = () => {
     return false;
   } else {
     Surname.style.border = "2px solid green ";
+    checkerror1.textContent = "";
   }
 
   //given name
@@ -27,6 +28,7 @@ const validation = () => {
     return false;
   } else {
     Given.style.border = "2px solid green ";
+    checkerror.textContent = "";
   }
 
 
@@ -41,6 +43,7 @@ const validation = () => {
     return false;
   } else {
     date.style.border = "2px solid green";
+    checkerror2.textContent = "";
   }
 
   let Place = document.registration.place;
@@ -53,6 +56,7 @@ const validation = () => {
     return false;
   } else {
     Place.style.border = "2px solid green ";
+    checkerror3.textContent = "";
     
   }
 
@@ -66,7 +70,7 @@ const validation = () => {
     return false;
   } else {
     Occupation.style.border = "2px solid green ";
-    
+    checkerror4.textContent = "";
   }
 
   let Nation = document.registration.nationality;
@@ -79,6 +83,7 @@ const validation = () => {
     return false;
   } else {
     Nation.style.border = "2px solid green ";
+    checkerror5.textContent = "";
     // return true;
   }
 
@@ -90,7 +95,8 @@ const validation = () => {
     cat.style.border = "2px Solid red";
     return false;
   } else {
-    cat.style.border = "2px solid green";   
+    cat.style.border = "2px solid green";  
+    checkerror6.textContent = ""; 
   }
 
   return true;
@@ -108,6 +114,7 @@ const val2 = () => {
     return false;
   } else {
     Given.style.border = "2px solid green ";
+    checkerror.textContent = "";
     // return true;
   }
 };
@@ -123,6 +130,7 @@ const val1 = () => {
     return false;
   } else {
     Surname.style.border = "2px solid green ";
+    checkerror.textContent = "";
     // return true;
   }
 };
@@ -137,6 +145,7 @@ const val3 = () => {
     return false;
   } else {
     date.style.border = "2px solid green";
+    checkerror.textContent = "";
     // return true;
   }
 };
@@ -152,6 +161,7 @@ const val4 = () => {
     return false;
   } else {
     Place.style.border = "2px solid green ";
+    checkerror.textContent = "";
     // return true;
   }
 };
@@ -167,6 +177,7 @@ const val5 = () => {
     return false;
   } else {
     Occupation.style.border = "2px solid green ";
+    checkerror.textContent = "";
     // return true;
   }
 };
@@ -182,6 +193,7 @@ const val6 = () => {
     return false;
   } else {
     Nation.style.border = "2px solid green ";
+    checkerror.textContent = "";
     // return true;
   }
 };
@@ -196,6 +208,7 @@ const val7 = () => {
     return false;
   } else {
     cat.style.border = "2px solid green";
+    checkerror.textContent = "";
     //  return true;
   }
 };
