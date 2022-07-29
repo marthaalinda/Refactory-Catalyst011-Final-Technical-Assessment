@@ -1,0 +1,130 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Uganda Covid-19 Virus-Test Registration Form
+  link(rel='stylesheet' href='/bootstrap/css/bootstrap.css')
+  style.
+    body {
+    background-color: rgb(255, 255, 240);
+    }
+    .modalImg {
+    overflow: hidden;
+    max-width: 460px;
+    }
+    h5 {
+    margin-bottom: 0px;
+    margin-top: 2px;
+    }
+    .modal-body {
+    background-color: rgb(255, 255, 240);
+    }
+    .modal-header {
+    background-color: aliceblue;
+    }
+    .modal-footer {
+    background-color: aliceblue;
+    }
+nav.navbar.navbar-expand-lg.navbar-dark.bg-dark
+  .container-fluid
+    span.navbar-brand.mb-0.ms-5.ps-5(style='font-size: 20px; color: aliceblue') Uganda Covid-19 Virus-Test Registration Form
+.container
+  #carouselExampleSlidesOnly.carousel.slide(data-bs-ride='carousel')
+    .carousel-inner
+      .carousel-item.active
+        img.d-block.w-100(src='/Imgs/covidCarousel.jpg' style='max-height: 100px' alt='...')
+.container
+  .row
+    .col-sm-12
+      p
+        | To Register a Patient, Click the Button Below, and Submit the
+        | Appropriately Populated Form.
+      .card
+        .card-body            
+          .row
+            .col-sm-6
+              button.btn.btn-primary(data-bs-toggle='modal' data-bs-target='#registerPatientModal')
+                | Register Patient
+            //
+              <div class="col-sm-6">
+              <button class="btn btn-primary"></button>
+              </div>
+#registerPatientModal.modal.fade(tabindex='-1' aria-labelledby='registerPatientModalLabel' aria-hidden='true')
+  .modal-dialog
+    .modal-content
+      .modal-header(style='max-height: 30px')
+        h5#registerPatientModalLabel.modal-title
+          | Register Patient
+        button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+      .modal-body
+        .container-fluid
+          .row
+            .col
+              form.row.g-3.was-validated(name='registration' method='post' action='/patient')
+                .col-sm-12.d-flex.justify-content-center.ps-0.pe-0
+                  img.modalImg(src='/Imgs/covidCarousel.jpg' alt='')
+                .col-sm-12
+                  ul(style='\
+                  list-style-type: none;\
+                  text-align: center;\
+                  padding-left: 0px;\
+                  ')
+                    li
+                      h5 Ministry of Health
+                    li
+                      h5 COVID 19
+                    li
+                      h4.mb-0 Virus-Test Registration Form
+                .col-sm-6.mt-0
+                  label(for='') Surname
+                  input(type='text' name='surname' onblur='patientSurname()' required='')
+                  .invalid-feedback Required
+                  .valid-feedback All good!
+                .col-sm-6.mt-0
+                  label(for='') Given Name
+                  input(type='text' name='givenname' onblur='patientGivenname()' required='')
+                  .invalid-feedback Required
+                  .valid-feedback All good!
+                .col-sm-6
+                  label(for='') D.O.B
+                  input(type='date' name='dob' onblur='dateOfBirth()' required='')
+                  .invalid-feedback Required
+                  .valid-feedback All good!
+                .col-sm-6
+                  label(for='') Place of Residence
+                  input(type='text' name='residence' onblur='placeOFResidence()' required='')
+                  .invalid-feedback Required
+                  .valid-feedback All good!
+                .col-sm-6
+                  label(for='') Occupation
+                  input(type='text' name='occupation' onblur='patientOccupation()' required='')
+                  .invalid-feedback Required
+                  .valid-feedback All good!
+                .col-sm-6
+                  label(for='') Nationality
+                  input(type='text' name='nationality' onblur='patientNationality()' required='')
+                  .invalid-feedback Required
+                  .valid-feedback All good!
+                .col-sm-12.mb-0(style='border-bottom: 1px solid black')
+                  p.mb-0 Gender
+                .col-sm-6.mt-0
+                  label(for='') Male
+                  input(type='checkbox' name='gendermale' onblur='patientGender()' value='male')
+                  label(for='') Female
+                  input(type='checkbox' name='genderfemale' onblur='patientGender()' value='female')
+                .col-sm-12
+                  label(for='') Category
+                  select(name='category' id='' onblur='patientCategory()' required='')
+                    option(value='default' disabled='' selected='')
+                      | Select Patient Category
+                    option(value='Returnee') Returnee
+                    option(value='Contact') Contact
+                    option(value='Alert') Alert
+                    option(value='Volunteer') Volunteer
+                .d-flex.justify-content-end
+                  button.btn.btn-success(type='submit' href=('/patient'))
+                    | Submit
+      .modal-footer
+script(src='/bootstrap/js/bootstrap.js')
+script(src='/Js/validation.js')
