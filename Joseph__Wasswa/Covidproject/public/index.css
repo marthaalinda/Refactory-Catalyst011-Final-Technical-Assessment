@@ -3,15 +3,21 @@
     margin-top: 30px;
     margin-bottom: 30px;
     width: 800px;
-    height: 600px;
+    height:auto;
     border-radius: 20px;
     padding: 40px;
     box-sizing: border-box;
     border-style: solid;
     border-color:black;
     border-width:thin; 
-    margin-left:200px;
-    }
+    margin-left:250px;
+ }
+ label{
+    margin-top:5px;
+ }
+ option{
+    padding-left:50px;
+ }
 
 h3{
     color:black;
@@ -25,31 +31,11 @@ h4{
     text-decoration: solid;
     font-size:20px;
 }
-/* table{
-    width: 400px;
-} */
-/* th, caption{
-    text-align: left;
-} */
-/* table,th,td{
-    border: 1px solid black;
-    border-collapse: collapse;
-
-} */
-
-  /* th,td{
-    margin-top: 150px;
- border-collapse: collapse; 
-    padding: 10px;
-    
-}  */
-
-/* tr:nth-child(even){
-    background-color: #add;
-
-} */
 button{
     margin-top:10px;
+    width:50%;
+    float:center;
+    margin-left:150px;
 };
 
 .one{

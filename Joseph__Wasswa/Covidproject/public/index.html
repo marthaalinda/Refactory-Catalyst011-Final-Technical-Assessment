@@ -19,67 +19,68 @@
                 <h4> MINISTRY OF HEALTH</h4>
                 <h3><b>COVID-19 (CORONA VIRUS)</b></h3>
                 <h4> VIRUS-TEST REGISTRATION FORM</h4>
-                <form name="registration" action="/register" method="POST" onblur="firstFocus()">
+                <form name="registration" action="/register" method="POST" onsubmit="return validation()">
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label>Surname</label>
-                            <input class="form-control" type="text" name="surname" onblur="valSur()">
+                            <input class="form-control" type="text"  name="surname" onblur="val1()">
                             <p class="one"></p>
                         </div>
-
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label>Given name</label>
-                            <input class="form-control" type="text" name="given" onblur="valGi()">
+                            <input class="form-control" type="text"  name="givenname" onblur="val2()">
                             <p class="two"></p>
                         </div>
                     </div>
-
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label>Date of Birth</label>
-                            <input class="form-control" type="date">
+                            <input class="form-control" type="date" name="date" onblur="val3()">
+                            <p class="three"></p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label>Place of residence</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text"  name="place" onblur="val4()">
+                            <p class="four"></p>
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label>Occupation</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text"  name="occupation" onblur="val5()">
+                            <p class="five"></p>
                         </div>
-                        <div class="col-6">
+                        <div class="col-md-6">
                             <label>Nationality</label>
-                            <input class="form-control" type="text">
+                            <input class="form-control" type="text"  name="nationality" onblur="val6()">
+                            <p class="six"></p>
                         </div>
                     </div>
-
                     <div class="row">
-                        <div class="col-12">
+                        <div class="col-md-12">
                             <label>Gender</label>
                             <br />
-                            Male :<input type="radio" name="male" checked>
-                            Female :<input type="radio" name="male">
+                            Male :<input type="radio" name="gender" value="male" checked style="margin-right:50px">
+                            Female :<input type="radio" name="gender" value="female">
                         </div>
                     </div>
-
                     <div class="row">
-                        <div class="col-6">
+                        <div class="col-md-12">
                             <label>Category</label>
-                            <select class="form-control">
-                                <option>Default</option>
-                                <option>underr 18yrs</option>
-                                <option>above 18years-49years</option>
-                                <option>above 50years</option>
+                            <select class="form-control" name="category"  onblur="val7()">
+                                <option value="">--select Category--</option>
+                                <option value="underage">Under 18yrs</option>
+                                <option value="middleage">Above 18years-49years</option>
+                                <option value="overage">Above 50years</option>
 
                             </select>
+                            <p class="seven"></p>
 
                         </div>
                     </div>
 
 
-                    <button type="submit">register</button>
+                    <button type="submit" class="btn btn-primary">Register</button>
 
 
                 </form>
@@ -91,7 +92,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
         crossorigin="anonymous"></script>
-    <script src="/index.js"></script>
+    <script src="/public/index.js"></script>
 </body>
 
 </html>
