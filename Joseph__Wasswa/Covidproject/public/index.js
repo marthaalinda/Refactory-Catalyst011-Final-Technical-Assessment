@@ -1,9 +1,9 @@
-const Validation = () => {  
+const validation = () => {  
 
   let Given = document.registration.givenname;
   let checkerror = document.querySelector(".two");
   const givename = /^[a-zA-Z0-9]+$/;
-  if (Given.value.length < 3 || !Given.value.match(givename)) {
+  if (Given.value.length < 1 || !Given.value.match(givename) || Given.value.length > 16) {
     Given.style.border = "2px solid red";
     checkerror.textContent = "This field is required";
     checkerror.style.color = "red";
@@ -17,7 +17,7 @@ const Validation = () => {
   let Surname = document.registration.surname;
   let checkerror1 = document.querySelector(".one");
   const surname = /^[a-zA-Z0-9]+$/;
-  if (Surname.value.length < 3 || !Surname.value.match(surname)) {
+  if (Surname.value.length < 1 || !Surname.value.match(surname) || Surname.value.length > 16) {
     Surname.style.border = "2px solid red";
     checkerror1.textContent = "This field is required";
     checkerror1.style.color = "red";
@@ -42,7 +42,7 @@ const Validation = () => {
   let Place = document.registration.place;
   let checkerror3 = document.querySelector(".four");
   const place = /^[a-zA-Z0-9]+$/;
-  if (Place.value.length < 3 || !Place.value.match(place)) {
+  if (Place.value.length < 1 || !Place.value.match(place) || Place.value.length > 20) {
     Place.style.border = "2px solid red";
     checkerror3.textContent = "This field is required";
     checkerror3.style.color = "red";
@@ -55,7 +55,7 @@ const Validation = () => {
   let Occupation = document.registration.occupation;
   let checkerror4 = document.querySelector(".five");
   const Occupants = /^[a-zA-Z0-9]+$/;
-  if (Occupation.value.length < 3 || !Occupation.value.match(Occupants)) {
+  if (Occupation.value.length < 5 || !Occupation.value.match(Occupants) || Occupation.value.length > 50) {
     Occupation.style.border = "2px solid red";
     checkerror4.textContent = "This field is required";
     checkerror4.style.color = "red";
@@ -68,7 +68,7 @@ const Validation = () => {
   let Nation = document.registration.nationality;
   let checkerror5 = document.querySelector(".six");
   const Uganda = /^[a-zA-Z0-9]+$/;
-  if (Nation.value.length < 3 || !Nation.value.match(Uganda)) {
+  if (Nation.value.length < 5 || !Nation.value.match(Uganda) || Nation.value.length > 20 ) {
     Nation.style.border = "2px solid red";
     checkerror5.textContent = "This field is required";
     checkerror5.style.color = "red";
@@ -86,8 +86,7 @@ const Validation = () => {
     cat.style.border = "2px Solid red";
     return false;
   } else {
-    cat.style.border = "2px solid green";
-   
+    cat.style.border = "2px solid green";   
   }
 
   return true;
@@ -98,14 +97,14 @@ const val2 = () => {
   let Given = document.registration.givenname;
   let checkerror = document.querySelector(".two");
   const givename = /^[a-zA-Z0-9]+$/;
-  if (Given.value.length < 3 || !Given.value.match(givename)) {
+  if (Given.value.length < 1 || !Given.value.match(givename) || Given.value.length > 16) {
     Given.style.border = "2px solid red";
     checkerror.textContent = "This field is required";
     checkerror.style.color = "red";
     return false;
   } else {
     Given.style.border = "2px solid green ";
-    return true;
+    // return true;
   }
 };
 // firstname
@@ -113,17 +112,16 @@ const val1 = () => {
   let Surname = document.registration.surname;
   let checkerror = document.querySelector(".one");
   const surname = /^[a-zA-Z0-9]+$/;
-  if (Surname.value.length < 3 || !Surname.value.match(surname)) {
+  if (Surname.value.length < 1 || !Surname.value.match(surname) || Surname.value.length > 16) {
     Surname.style.border = "2px solid red";
     checkerror.textContent = "This field is required";
     checkerror.style.color = "red";
     return false;
   } else {
     Surname.style.border = "2px solid green ";
-    return true;
+    // return true;
   }
 };
-
 // date
 const val3 = () => {
   let date = document.registration.date;
@@ -135,55 +133,55 @@ const val3 = () => {
     return false;
   } else {
     date.style.border = "2px solid green";
-    return true;
+    // return true;
   }
 };
-
+//
 const val4 = () => {
   let Place = document.registration.place;
   let checkerror = document.querySelector(".four");
   const place = /^[a-zA-Z0-9]+$/;
-  if (Place.value.length < 3 || !Place.value.match(place)) {
+  if (Place.value.length < 1 || !Place.value.match(place) || Place.value.length > 20) {
     Place.style.border = "2px solid red";
     checkerror.textContent = "This field is required";
     checkerror.style.color = "red";
     return false;
   } else {
     Place.style.border = "2px solid green ";
-    return true;
+    // return true;
   }
 };
-
+//
 const val5 = () => {
   let Occupation = document.registration.occupation;
   let checkerror = document.querySelector(".five");
   const Occupants = /^[a-zA-Z0-9]+$/;
-  if (Occupation.value.length < 3 || !Occupation.value.match(Occupants)) {
+  if (Occupation.value.length < 5 || !Occupation.value.match(Occupants) || Occupation.value.length > 50) {
     Occupation.style.border = "2px solid red";
     checkerror.textContent = "This field is required";
     checkerror.style.color = "red";
     return false;
   } else {
     Occupation.style.border = "2px solid green ";
-    return true;
+    // return true;
   }
 };
-
+//
 const val6 = () => {
   let Nation = document.registration.nationality;
   let checkerror = document.querySelector(".six");
   const Uganda = /^[a-zA-Z0-9]+$/;
-  if (Nation.value.length < 3 || !Nation.value.match(Uganda)) {
+  if (Nation.value.length < 5 || !Nation.value.match(Uganda) || Nation.value.length > 20) {
     Nation.style.border = "2px solid red";
     checkerror.textContent = "This field is required";
     checkerror.style.color = "red";
     return false;
   } else {
     Nation.style.border = "2px solid green ";
-    return true;
+    // return true;
   }
 };
-
+//
 const val7 = () => {
   let cat = document.registration.category;
   let checkerror = document.querySelector(".seven");
@@ -194,6 +192,6 @@ const val7 = () => {
     return false;
   } else {
     cat.style.border = "2px solid green";
-    return true;
+    //  return true;
   }
 };
