@@ -1,0 +1,72 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(http-equiv='X-UA-Compatible' content='IE=edge')
+  meta(name='viewport' content='width=device-width, initial-scale=1.0')
+  title Covid Registration
+  link(rel='stylesheet' href='/Asaba-Doreen/techAssessment/public/style.css')
+  link(rel='stylesheet' href='/Asaba-Doreen/techAssessment/public/css/bootstrap.css')
+img(src='/set/images/header-images/form-header-image.png' alt='image')
+h4.center Ministry of Health
+h2 COVID-19 (CORONA VIRUS)
+h3 Virus-Test Registration Form
+.container-fluid
+  form(action='/index' method="POST" name='indexform')
+    .center
+      // row1
+      .row.sellRow
+        .col-md-6.col-12.col1
+          .inputbox
+            input(type='text' name='surname' required='required' onblur='valsurName(this, info1)')
+            span Surname
+          span#info1
+        .col-md-6.col-12.col1
+          .inputbox
+            input(type='text' name='name' required='required' onblur='valname(this, info2)')
+            span Given name
+          span#info2
+      // row 2
+      .row.sellRow
+        p.date Date of Birth
+        .col-md-6.col-12.col1
+          .inputbox
+            input(type='date' name='DOB' required='required')
+            // <span>Date of Birth</span>
+        .col-md-6.col-12.col1
+          .inputbox
+            input(type='text' name='residence' required='required' onblur='valResidence(this,info3)')
+            span Place of Residence
+          span#info3
+      // row 3
+      #specialrow.row.sellRow
+        // <p class="date">Occupation</p>
+        .col-md-6.col-12.col1
+          .inputbox
+            input(type='text' name='occupation' required='required' onblur='valOccupation(this,info4)')
+            span Occupation
+          span#info4
+        .col-md-6.col-12.col1
+          .inputbox
+            input(type='text' name='nationality' required='required' onblur='valNationality(this, info5)')
+            span Nationality
+          span#info5
+        .col-md-6.col-12.col1
+          .inputbox
+            select(name='gender' onblur='valGender(this, info6)')
+              option(value='Select') Gender
+              option(value='Female') Female
+              option(value='male') Male
+          span#info6
+      .col-md-6.col-12.col1
+        .inputbox
+          select(name='category' onblur='valcategory(this, info7)')
+            option(value='Select') Select Category
+            option(value='returnee') Returnee
+            option(value='contact') Contact
+            option(value='alert') Alert
+            option(value='volunteer') Volunteer
+      span#info7
+    .inputbox
+      button.loginbutton Register
+script(src='/Asaba-Doreen/techAssessment/public/validation.js')
+script(src='/Asaba-Doreen/techAssessment/public/js/bootstrap.bundle.js')
