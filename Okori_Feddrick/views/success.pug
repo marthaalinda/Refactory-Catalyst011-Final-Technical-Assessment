@@ -1,0 +1,73 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title Document
+    link#bootstrap-css(href='//netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css', rel='stylesheet')
+    link(href='/style.css' rel='stylesheet')
+  body
+    .container
+      .row.centered-form
+        .panel-heading
+        .col-xs-12.col-sm-8
+          .panel.panel-default
+            .panel-body
+              img(src='/images/header-images/form-header-image.png')
+              h3 Ministry of Health
+              h2.virus COVID-19(CORONA VIRUS)
+              h3 Virus - Test Registration Form
+              p.success Registration was Successful!
+              form(role='form' action='/' method="POST")
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Surname
+                      input#first_name.form-control.input-sm(type='text', name='surname_name', placeholder='')
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Given Name:
+                      input#given_name.form-control.input-sm(type='text', name='last_name', placeholder='')
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Date of Birth:
+                      input#dob.form-control.input-sm(type='date', name='dob', placeholder='')
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Place of Residence
+                      input#residence.form-control.input-sm(type='text', name='residence', placeholder='')
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Occupation
+                      input#occupation.form-control.input-sm(type='text', name='occupation', placeholder='')
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      label Nationality
+                      input#nationality.form-control.input-sm(type='text', name='nationality', placeholder='Last Name')
+                .col
+                  .form-group
+                    label Gender
+                   
+                .row
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      input(type='radio', value='sex', name='male', selected='')
+                      | Male
+                  .col-xs-6.col-sm-6.col-md-6
+                    .form-group
+                      input(type='radio', value='', name='female')
+                      | Female
+                  .col-xs-6.col-sm-6.col-md-6
+                    label Category
+                    .form-group
+                      select.form-select
+                        option(name='default') select option
+                        option(name='default') Home
+                        option(name='default') Away
+                        option(name='default') Outreach
+              input.btn.btn-info.btn-block(type='submit', value='Register')
+    script(src='/bootstrap/js/bootstrap.js')
+    
