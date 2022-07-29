@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid Registration</title>
+    <link rel="stylesheet" href="/Asaba-Doreen/techAssessment/public/style.css">
+    <link rel="stylesheet" href="/Asaba-Doreen/techAssessment/public/css/bootstrap.css">
+</head>
+<body onload="firstFocus()">
+    <img src="/set/images/header-images/form-header-image.png" alt="image">
+    <h4 class="center">Ministry of Health</h4>
+    <h2>COVID-19 (CORONA VIRUS)</h2>
+    <h3>Virus-Test Registration Form</h3>
+    <div class="container-fluid">
+        <form action="" name="indexform">
+       <div class="center">
+        <!-- row1 -->
+        <div class="row sellRow">
+            <div class="col-md-6 col-12  col1">
+                <div class="inputbox">
+                    <input type="text" name="surname" required="required" onblur="valsurName(this, info1)">
+                    <span>Surname</span>
+                </div>
+                <span id="info1"></span>
+            </div>
+            <div class="col-md-6 col-12  col1">
+                <div class="inputbox">
+                    <input type="text" name="name" required="required" onblur="valname(this, info2)">
+                    <span>Given name</span>
+                </div>
+                <span id="info2"></span>
+            </div>
+         </div>
+         <!-- row 2 -->
+         <div class="row sellRow">
+            <p class="date">Date of Birth</p>
+            <div class="col-md-6 col-12  col1">
+                <div class="inputbox">
+                    <input type="date" name="DOB" required="required" >
+                    <!--<span>Date of Birth</span>-->
+                </div>
+            
+            </div>
+            <div class="col-md-6 col-12  col1">
+                <div class="inputbox">
+                    <input type="text" name="residence" required="required" onblur="valResidence(this,info3)">
+                    <span>Place of Residence</span>
+                </div>
+                <span id="info3"></span>
+            </div>
+         </div>
+         <!-- row 3 -->
+         <div id="specialrow" class="row sellRow">
+            <!--<p class="date">Occupation</p>-->
+            <div class="col-md-6 col-12  col1">
+               
+                <div class="inputbox">
+                    
+                    <input type="text" name="occupation" required="required" onblur="valOccupation(this,info4)">
+                    <span>Occupation</span>
+                </div>
+                <span id="info4"></span>
+            </div>
+
+            <div class="col-md-6 col-12  col1">
+                <div class="inputbox">
+                    <input type="text" name="nationality" required="required" onblur="valNationality(this, info5)">
+                    <span>Nationality</span>
+                </div>
+                <span id="info5"></span>
+            </div>
+            <div class="col-md-6 col-12  col1">
+                <div class="inputbox">
+                    <select name="gender" onblur="valGender(this, info6)">
+                        <option value="Select">Gender</option>
+                        <option value="Female">Female</option>
+                        <option value="male">Male</option>
+                      </select>
+                  </div>
+                  <span id="info6"></span>
+            </div>
+         </div>
+         <div class="col-md-6 col-12  col1">
+            <div class="inputbox">
+                <select name="category" onblur="valcategory(this, info7)">
+                    <option value="Select">Select Category</option>
+                    <option value="returnee">Returnee</option>
+                    <option value="contact">Contact</option>
+                    <option value="alert">Alert</option>
+                    <option value="volunteer">Volunteer</option>
+                  </select>
+              </div>
+        </div>
+        <span id="info7"></span>
+            
+         </div>
+    
+         <div class="inputbox">
+            <button class="loginbutton">Register</button>
+          </div>
+    
+       </div>
+        
+     </form>
+    </div>
+     </body>
+    
+
+
+    <script src="/Asaba-Doreen/techAssessment/public/validation.js"></script>
+    <script src="/Asaba-Doreen/techAssessment/public/js/bootstrap.bundle.js"></script>
+</body>
+</html>
