@@ -1,17 +1,7 @@
 const validation = () => {  
 
-  let Given = document.registration.givenname;
-  let checkerror = document.querySelector(".two");
-  const givename = /^[a-zA-Z0-9]+$/;
-  if (Given.value.length < 1 || !Given.value.match(givename) || Given.value.length > 16) {
-    Given.style.border = "2px solid red";
-    checkerror.textContent = "This field is required";
-    checkerror.style.color = "red";
-    return false;
-  } else {
-    Given.style.border = "2px solid green ";
-  }
 
+  
   // firstname
 
   let Surname = document.registration.surname;
@@ -25,6 +15,20 @@ const validation = () => {
   } else {
     Surname.style.border = "2px solid green ";
   }
+
+  //given name
+  let Given = document.registration.givenname;
+  let checkerror = document.querySelector(".two");
+  const givename = /^[a-zA-Z0-9]+$/;
+  if (Given.value.length < 1 || !Given.value.match(givename) || Given.value.length > 16) {
+    Given.style.border = "2px solid red";
+    checkerror.textContent = "This field is required";
+    checkerror.style.color = "red";
+    return false;
+  } else {
+    Given.style.border = "2px solid green ";
+  }
+
 
   // date
 
