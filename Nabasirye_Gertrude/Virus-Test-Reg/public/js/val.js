@@ -126,4 +126,5 @@ form.addEventListener('submit', (Event) => {
   }
 
   Event.preventDefault();
+  // Event.stopImmediatePropagation()
 });
