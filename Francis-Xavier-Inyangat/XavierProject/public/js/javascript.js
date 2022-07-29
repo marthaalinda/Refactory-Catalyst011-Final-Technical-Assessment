@@ -88,7 +88,7 @@ const validNationality = ()=>{
 }
 
 const validGender = ()=>{
-    const gender = document.covidForm.radbtn;
+    const gender = document.covidForm.gender;
     const err6 = document.getElementById('err6');
     if(!gender.checked.value == 'male' || !gender.checked.value == 'female'){
         err6.innerHTML = 'error';

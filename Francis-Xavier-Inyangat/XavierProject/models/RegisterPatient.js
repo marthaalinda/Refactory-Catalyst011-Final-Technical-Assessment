@@ -3,28 +3,39 @@ const passportLocalMongoose = require("passport-local-mongoose");
 
 // define reg schema
 const RegisterSchema = new mongoose.Schema({
-    user_name:{
+    surname:{
         type: String,
-        required: true,
+        trim:true
     },
-    position:{
+    givenName:{
         type: String,
-        required: true,
+        trim:true
     },
-    branch:{
+    dob:{
         type: String,
-        required: true,
-    },
-    regEmail:{
-        type: String,
-        required: true,
-        unique: true
         
     },
-    // password:{
-    //     type: String,
-    //     required: true,
-    // }
+    residence:{
+        type: String,
+        trim:true
+    },
+    job:{
+        type: String,
+        trim:true
+    },
+    nationality:{
+        type: String,
+        trim:true
+    },
+    gender:{
+        type: String,
+        trim:true
+    },
+    category:{
+        type: String,
+        trim:true
+    }
+  
 });
 
 

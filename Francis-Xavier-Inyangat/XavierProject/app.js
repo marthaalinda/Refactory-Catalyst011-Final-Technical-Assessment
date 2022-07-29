@@ -17,7 +17,7 @@ const landingPage = require('./routes/landingPageRoute')
 
 // models
 const config = require('./config/database');
-const RegPatient = require('./models/RegisterPatient');
+
 
 // initializing the express server
 const app = express();
