@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="index.css" rel="stylesheet">
+
+    <title> Covid Registration Form </title>
+</head>
+<body>
+    
+    <div class= "container">
+        <form name="registration" onblur="firstFocus()"> 
+            <img src="/images/header-images/form-header-image.png">
+            <p class="fs-6">Ministry of Health</p>
+            <p class="fs-2">COVID-19(CORONA VIRUS)</p>
+            <p class="fs-6">Virus-Test Registration Form</p>
+            
+            <div class="row">
+                <div class="col-6">
+                    <label>Surname</label>
+                    <input class="form-control" type="text" name="surname" onblur="valSur()" onsubmit=" return Validation()">
+                    <p class="one"></p>
+                </div>
+                <div class="col-6">
+                    <label>Given name</label>
+                    <input class="form-control" type="text" name="given" onblur="ValGi()">
+                    <p class="two"></p>
+                </div>
+            </div>
+    <div class="row">
+        <div class="col-6">
+            <label>Date of birth</label>
+            <input class="form-control" type="date" name="date">
+            <p class="three"></p>
+        </div>
+        <div class="col-6">
+            <label>Place of Residence</label>
+            <input class="form-control" type="text" name="placeofresidence">
+            <p class="four"></p>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-6">
+            <label>Occupation</label>
+            <input class="form-control" type="text" name="occupation">
+            <p class="five"></p>
+        </div>
+        <div class="col-6">
+            <label>Nationality</label>
+            <input class="form-control" type="text" name="nationality">
+            <p class="six"></p>
+        </div>
+</div>
+<div class="row">
+    <div class="col-12">
+        <label>Gender</label>
+        <br/>
+     Male :<input  type="radio"  name="male" checked required>
+     Female :<input   type="radio"  name="male" >
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <label>Category</label>
+        <select class="form-control">
+            <option>Default</option>
+            <option>Returnee</option>
+            <option>Contact</option>
+            <option>Alert</option>
+            <option>Volunteer</option>
+        </select>
+<p class="six"></p>
+</div>
+<button type="submit">register</button>
+</form>
+<script src="index.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
