@@ -24,11 +24,11 @@ html(lang='en')
           .row
             #sur-name.col-md-6.mb-2
               label.form-label(for='surname') Surname
-              input.form-control.form-control-lg(type='text', name='surname', required='')
+              input.form-control.form-control-lg(type='text', name='surname')
               small#errSName
             #given-name.col-md-6.mb-2
               label.form-label(for='givename') Given Name
-              input.form-control.form-control-lg(type='text', name='givename', required='')
+              input.form-control.form-control-lg(type='text', name='givename')
               small#errGName
           .row
             #dob.col-md-6.mb-2
@@ -36,16 +36,16 @@ html(lang='en')
               input.form-control.form-control-lg(type='date', name='dob', min='1872-07-29', max='2021-07-29', required='')
             #place-res.col-md-6.mb-2
               label.form-label(for='residence') Place of residence
-              input.form-control.form-control-lg(type='text', name='residence', required='')
+              input.form-control.form-control-lg(type='text', name='residence')
               small#errRes
           .row
             #job.col-md-6.mb-2
               label.form-label(for='occup') Occupation
-              input.form-control.form-control-lg(type='text', name='occup', required='')
+              input.form-control.form-control-lg(type='text', name='occup')
               small#errOccup
             #ctry.col-md-6.mb-2
               label.form-label(for='ntnlty') Nationality
-              input.form-control.form-control-lg(type='text', name='ntnlty', required='')
+              input.form-control.form-control-lg(type='text', name='ntnlty')
               small#errNat
           .col.mb-2
             label(for='gender') Gender:
