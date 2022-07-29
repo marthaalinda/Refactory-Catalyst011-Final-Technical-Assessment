@@ -8,9 +8,14 @@ const validSname = ()=>{
     const err1 = document.getElementById('err1');
     const submitBtn = document.querySelector('#regbtn');
     const stringRegx = /^[a-zA-Z\-\']+$/;
-    if(surname.value.length <4 || !surname.value.match(stringRegx)){
+    if(surname.value.length <=1 || surname.value.length >=16){
         surname.style.border = '2px solid red';
-        err1.innerHTML = "Error Detected"
+        err1.innerHTML = "This Field is Required"
+        // submitBtn.disabled = true;
+        return false;
+    }else if(!surname.value.match(stringRegx)){
+        surname.style.border = '2px solid red';
+        err1.innerHTML = "Enter Valid name characters"
         // submitBtn.disabled = true;
         return false;
     }
@@ -26,14 +31,39 @@ const validGname = ()=>{
     const givenName = document.covidForm.givenName;
     const err2 = document.getElementById('err2');
     const stringRegx = /^[a-zA-Z\-\']+$/;
-    if(givenName.value.length <4 || !givenName.value.match(stringRegx)){
+    if(givenName.value.length <=1 ||givenName.value.length >=16){
         givenName.style.border = '2px solid red'
-        err2.innerHTML = 'Error'
+        err2.innerHTML = 'This Field is required!'
         return false;
-    }else{
+    }else if(!givenName.value.match(stringRegx)){
+        givenName.style.border = '2px solid red'
+        err2.innerHTML = 'Enter Valid name characters'
+        return false;
+    }
+    else{
         givenName.style.border = '2px solid green'
         err2.innerHTML = ''
     }
+    return true;
+}
+
+const validDOB= ()=>{
+    const birthDayDate = document.covidForm.dob.value;
+    const err10 = document.getElementById('err10');
+   
+    const ageInYears = moment().diff(new Date(birthDayDate), 'years');
+    console.log(ageInYears);
+    if(ageInYears <= 1){
+        dob.style.border = '2px solid red'
+        err10.innerHTML = 'Children are not allowed!'
+        return false;
+    }
+    
+    else{
+        dob.style.border = '2px solid green'
+        err10.innerHTML = ''
+    }
+    console.log(ageInYears);
     return true;
 }
 // place of residence
@@ -41,11 +71,16 @@ const validResidence = ()=>{
     const residence = document.covidForm.residence;
     const err3 = document.getElementById('err3');
     const stringRegx = /^[a-zA-Z\-\']+$/;
-    if(residence.value.length <4 || !residence.value.match(stringRegx)){
+    if(residence.value.length <=1 || residence.value.length >=20){
         residence.style.border = '2px solid red'
-        err3.innerHTML = 'Error'
+        err3.innerHTML = 'This Field is Required!'
         return false;
-    }else{
+    }else if(!residence.value.match(stringRegx)){
+        residence.style.border = '2px solid red'
+        err3.innerHTML = 'Please enter alphabet characters'
+        return false;
+    }
+    else{
         residence.style.border = '2px solid green'
         err3.innerHTML = ''
     }
@@ -57,11 +92,17 @@ const validOccupation = ()=>{
     const job = document.covidForm.job;
     const err4 = document.getElementById('err4');
     const stringRegx = /^[a-zA-Z\-\']+$/;
-    if(job.value.length <4 || !job.value.match(stringRegx)){
+    if(job.value.length <5 || job.value.length >=50){
         job.style.border = '2px solid red'
-        err4.innerHTML = 'Error'
+        err4.innerHTML = 'This Field is Required!'
         return false;
-    }else{
+    }
+    else if(!job.value.match(stringRegx)){
+        job.style.border = '2px solid red'
+        err4.innerHTML = 'Please enter alphabet characters!'
+        return false;
+    }
+    else{
         job.style.border = '2px solid green'
         err4.innerHTML = ''
     }
@@ -76,11 +117,16 @@ const validNationality = ()=>{
     const nationality = document.covidForm.nationality;
     const err5 = document.getElementById('err5');
     const stringRegx = /^[a-zA-Z\-\']+$/;
-    if(nationality.value.length <4 || !nationality.value.match(stringRegx)){
+    if(nationality.value.length <=5||nationality.value.length >=20){
         nationality.style.border = '2px solid red'
-        err5.innerHTML = 'Error'
+        err5.innerHTML = 'This Field is Required'
         return false;
-    }else{
+    }else if(!nationality.value.match(stringRegx)){
+        nationality.style.border = '2px solid red'
+        err5.innerHTML = 'Please enter alphabet characters!'
+        return false;
+    }
+    else{
         nationality.style.border = '2px solid green'
         err5.innerHTML = ''
     }
@@ -104,7 +150,7 @@ const validCat = ()=>{
     const err7 = document.getElementById('err7');
     if(category.value == 'default'){
         category.style.border = '2px solid red'
-        err7.innerHTML = 'Error';
+        err7.innerHTML = 'Please select a category!';
         return false;
     }else{
         category.style.border = '2px solid green'
