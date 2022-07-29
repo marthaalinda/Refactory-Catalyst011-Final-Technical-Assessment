@@ -93,10 +93,6 @@ const Validation = () => {
   return true;
 };
 
-// // onblur
-// const firstFocus = () => {
-//   let surname = document.registration.surname.focus();
-// };
 // secondname
 const val2 = () => {
   let Given = document.registration.givenname;
