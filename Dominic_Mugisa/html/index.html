@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Uganda Covid-19 Virus-Test Registration Form</title>
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.css" />
+    <style>
+      body {
+        background-color: rgb(255, 255, 240);
+      }
+      .modalImg {
+        overflow: hidden;
+        max-width: 460px;
+      }
+      h5 {
+        margin-bottom: 0px;
+        margin-top: 2px;
+      }
+      .modal-body {
+        background-color: rgb(255, 255, 240);
+      }
+      .modal-header {
+        background-color: aliceblue;
+      }
+      .modal-footer {
+        background-color: aliceblue;
+      }
+    </style>
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container-fluid">
+        <span
+          class="navbar-brand mb-0 ms-5 ps-5"
+          style="font-size: 20px; color: aliceblue"
+          >Uganda Covid-19 Virus-Test Registration Form</span
+        >
+      </div>
+    </nav>
+    <div class="container">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img
+              src="../public/Imgs/covidCarousel.jpg"
+              class="d-block w-100"
+              style="max-height: 100px"
+              alt="..."
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <p>
+            To Register a Patient, Click the Button Below, and Submit the
+            Appropriately Populated Form.
+          </p>
+          <div class="card">
+            <div class="card-body">
+              <div class="row">
+                <div class="col-sm-6">
+                  <button
+                    class="btn btn-primary"
+                    data-bs-toggle="modal"
+                    data-bs-target="#registerPatientModal"
+                  >
+                    Register Patient
+                  </button>
+                </div>
+                <!-- <div class="col-sm-6">
+                  <button class="btn btn-primary"></button>
+                </div> -->
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div
+      class="modal fade"
+      id="registerPatientModal"
+      tabindex="-1"
+      aria-labelledby="registerPatientModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header" style="max-height: 30px">
+            <h5 class="modal-title" id="registerPatientModalLabel">
+              Register Patient
+            </h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Close"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col">
+                  <form
+                    class="row g-3 was-validated"
+                    name="registration"
+                    method="post"
+                    action="/patient/register"
+                  >
+                    <div
+                      class="col-sm-12 d-flex justify-content-center ps-0 pe-0"
+                    >
+                      <img
+                        class="modalImg"
+                        src="../public/Imgs/covidCarousel.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="col-sm-12">
+                      <ul
+                        style="
+                          list-style-type: none;
+                          text-align: center;
+                          padding-left: 0px;
+                        "
+                      >
+                        <li><h5>Ministry of Health</h5></li>
+                        <li><h5>COVID 19</h5></li>
+                        <li>
+                          <h4 class="mb-0">Virus-Test Registration Form</h4>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="col-sm-6 mt-0">
+                      <label for="">Surname</label>
+                      <input
+                        type="text"
+                        name="surname"
+                        onblur="patientSurname()"
+                        required
+                      />
+                      <div class="invalid-feedback">Required</div>
+                      <div class="valid-feedback">All good!</div>
+                    </div>
+                    <div class="col-sm-6 mt-0">
+                      <label for="">Given Name</label>
+                      <input
+                        type="text"
+                        name="givenname"
+                        onblur="patientGivenname()"
+                        required
+                      />
+                      <div class="invalid-feedback">Required</div>
+                      <div class="valid-feedback">All good!</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="">D.O.B</label>
+                      <input
+                        type="date"
+                        name="dob"
+                        onblur="dateOfBirth()"
+                        required
+                      />
+                      <div class="invalid-feedback">Required</div>
+                      <div class="valid-feedback">All good!</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="">Place of Residence</label>
+                      <input
+                        type="text"
+                        name="residence"
+                        onblur="placeOFResidence()"
+                        required
+                      />
+                      <div class="invalid-feedback">Required</div>
+                      <div class="valid-feedback">All good!</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="">Occupation</label>
+                      <input
+                        type="text"
+                        name="occupation"
+                        onblur="patientOccupation()"
+                        required
+                      />
+                      <div class="invalid-feedback">Required</div>
+                      <div class="valid-feedback">All good!</div>
+                    </div>
+                    <div class="col-sm-6">
+                      <label for="">Nationality</label>
+                      <input
+                        type="text"
+                        name="nationality"
+                        onblur="patientNationality()"
+                        required
+                      />
+                      <div class="invalid-feedback">Required</div>
+                      <div class="valid-feedback">All good!</div>
+                    </div>
+                    <div
+                      class="col-sm-12 mb-0"
+                      style="border-bottom: 1px solid black"
+                    >
+                      <p class="mb-0">Gender</p>
+                    </div>
+                    <div class="col-sm-6 mt-0">
+                      <label for="">Male</label>
+                      <input
+                        type="checkbox"
+                        name="gendermale"
+                        onblur="patientGender()"
+                        value="male"
+                      />
+                      <label for="">Female</label>
+                      <input
+                        type="checkbox"
+                        name="genderfemale"
+                        onblur="patientGender()"
+                        value="female"
+                      />
+                    </div>
+                    <div class="col-sm-12">
+                      <label for="">Category</label>
+                      <select
+                        name="category"
+                        id=""
+                        onblur="patientCategory()"
+                        required
+                      >
+                        <option value="default" disabled selected>
+                          Select Patient Category
+                        </option>
+                        <option value="Returnee">Returnee</option>
+                        <option value="Contact">Contact</option>
+                        <option value="Alert">Alert</option>
+                        <option value="Voluteer">Voluteer</option>
+                      </select>
+                    </div>
+                    <div class="d-flex justify-content-end">
+                      <button type="submit" class="btn btn-success">
+                        Submit
+                      </button>
+                    </div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="modal-footer"></div>
+        </div>
+      </div>
+    </div>
+
+    <script src="../public/bootstrap/js/bootstrap.js"></script>
+    <script src="../public/Js/validation.js"></script>
+  </body>
+</html>
