@@ -1,0 +1,65 @@
+.container{ 
+ position: static;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 800px;
+    height:auto;
+    border-radius: 20px;
+    padding: 40px;
+    box-sizing: border-box;
+    border-style: solid;
+    border-color:black;
+    border-width:thin; 
+    margin-left:250px;
+ }
+ label{
+    margin-top:5px;
+ }
+ option{
+    padding-left:50px;
+ }
+
+h3{
+    color:black;
+    text-align:center;
+    text-decoration: solid;
+    font-size:25px;
+}
+h4{
+    color:black;
+    text-align:center;
+    text-decoration: solid;
+    font-size:20px;
+}
+button{
+    margin-top:10px;
+    width:50%;
+    float:center;
+    margin-left:200px;
+};
+
+.one{
+    color: red;
+}
+.two{
+    color: red;
+}
+
+.three{
+    color: red;
+};
+
+.four{
+    color: red;
+}
+
+.five{
+    color: red;
+};
+
+.six{
+    color: red;
+}
+.seven{
+    color: red;
+}
