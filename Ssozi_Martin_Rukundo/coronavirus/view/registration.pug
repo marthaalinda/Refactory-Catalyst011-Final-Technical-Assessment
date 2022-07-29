@@ -1,0 +1,82 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='UTF-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=edge')
+    meta(name='viewport', content='width=device-width, initial-scale=1.0')
+    title MOH|Registration
+    link(href='/css/bootstrap.css', type='text/css', rel='stylesheet')
+    link(href='/styles.css', type='text/css', rel='stylesheet')
+  body
+    .container-py-px-(width='50', height='80')
+      .card-header
+        .card-body
+          .card-title(style='text-align:center;')
+            .row
+              .col-mb-5
+                img(src='/set/images/header-images/uganda-flag-part.png', style=' left:0%;')
+                |  
+                br
+              .col-mb-2
+                img(src='/set/images/header-images/uganda-coat_of_arms.png', width='200', height='auto', style='text-align:center')
+              .col-mb-5
+                img(src='/set/images/header-images/uganda-flag-part.png', style='top:0%; right:0%;')
+            .row
+              .col-head
+                h3 Ministry of alth
+                h2 COVID-19(CORONA VIRUS)
+                h3 Virus Test Registration Form
+          form(action='/register' method='POST' name='registerform')
+            .card-body(style='text-align:center;')
+              .row
+                .col
+                  label.form-label(for='') Surname
+                  |  
+                  br
+                  input#surname(type='text' name='surName' id='surname')
+                .col
+                  label.form-label(for='') Last Name
+                  |  
+                  br
+                  input#lastname(type='text' name='givenName' id='lastname')
+              .row
+                .col
+                  label.form-label(for='') Date of birth
+                  |  
+                  br
+                  input#dob(type='date' name='dateofBirth' id='dateofbirth')
+                .col
+                  label.form-label(for='') Place of residence
+                  |  
+                  br
+                  input#por(type='text' name='placeOfResidence' id='placeofresidence')
+              .row
+                .col
+                  label.form-label(for='') Occupation
+                  |  
+                  br
+                  input#occupation(type='text' name='occupation' id='surname')
+                .col
+                  label.form-label(for='') Nationality
+                  |  
+                  br
+                  input#nationality(type='text' name='nationality' id='nationality')
+              .tableRow
+                label Gender:
+                .span
+                  input(type='radio', value='male', name='Male')
+                  |  Male
+              .tableRow
+                label
+                .span
+                  input(type='radio', value='female', name='Female')
+                  |  Female
+              .row
+                .col
+                  label.form-label(for='') Category
+                  |  
+                  br
+                  select#category.select-input (name='category' id='category')
+                    option(value='default') --Select category--
+                    option(value='beans') First
+                    option(value='maize') Second
