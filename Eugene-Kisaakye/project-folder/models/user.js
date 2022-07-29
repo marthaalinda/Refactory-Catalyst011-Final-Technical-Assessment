@@ -37,15 +37,6 @@ const userSchema = mongoose.Schema({
     type: String,
     required: true,
   },
-
-  security: {
-    type: String,
-    required: true,
-  },
-  fallback: {
-    type: String,
-    required: true,
-  },
 });
 
 module.exports = mongoose.model("Registration", userSchema);
