@@ -1,0 +1,62 @@
+doctype html
+html(lang="en")
+    head
+        //- meta(charset="UTF-8")
+        //- meta(http-equiv="X-UA-Compatible", content="IE=edge")
+        //- meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        //- Bootstrap
+        link(rel="stylesheet", href="http://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css") 
+        title Registration
+    body(onload='firstFocus()')
+        .container 
+            .row.justify-content-center
+                .col-md-6
+                    .card-body
+                        header.card-header 
+                            h4.card-title-center Ministry Of Health
+                            h2.card-title COVID-19(CORONA VIRUS)
+                            h4.card-title Virus-Test Registration Form
+                        form(action='/register' method='POST')
+                            .form-row 
+                                .col.form-group
+                                    label(for="firstname") First Name: 
+                                    input.form-control(type="text" name="firstname" size='16' onblur='userfirst(1,16)')
+                                .col.form-group
+                                    label(for="lastname") Last Name: 
+                                    input.form-control(type="text" name="lastname" size='16' onblur='userlast(1,16)')
+                            .form-row 
+                                .col.form-group
+                                    label(for="placeofresidence") Place of residence: 
+                                    input.form-control(type="text" name="placeofresidence" size='20' onblur='userres(1,20)')
+                                .col.form-group
+                                    label(for="dob") Date of Birth: 
+                                    input.form-control(type="date" name="dob")
+                            .form-row 
+                                .col.form-group
+                                    label(for="occupation") Occupation: 
+                                    input.form-control(type="text" name="occupation" size='20' onblur='userocc(5,20)')
+                                .col.form-group
+                                    label(for="nationality") Nationality: 
+                                    input.form-control(type="text" name="nationality" size='20' onblur='usernat(5,20)')
+                            .form-row 
+                                .col.form-group
+                                    label(for="gender") Gender: 
+                                    div
+                                        label.form-check.form-check-inline
+                                            input.form-check-input(type="radio" name="gender" value="Female")
+                                            span.form-check-label Female
+                                        label.form-check.form-check-inline
+                                            input.form-check-input(type="radio" name="gender" value="Male")
+                                            span.form-check-label Male
+                            .form-row 
+                                .col.form-group
+                                    label(for="category") Category: 
+                                    select.form-control(type="text" name="category")
+                                        option(value="returnee") Returnee
+                                        option(value="contact") Contact
+                                        option(value="alert") Alert
+                                        option(value="volunteer") Volunteer
+                            .form-row 
+                                .col.form-group 
+                                    button.btn.btn-primary(type='submit').btn-block Register
+    script(src='validation.js')
