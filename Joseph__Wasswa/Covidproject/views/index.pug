@@ -14,6 +14,8 @@ head
       h3
         b COVID-19 (CORONA VIRUS)
       h4  VIRUS-TEST REGISTRATION FORM
+      //- if alert=='success'
+      //-       div.alert.alert-success Regsitered successfully!
       form(name='registration' action='/register' method='POST' onsubmit='return validation();')
         .row
           .col-md-6
