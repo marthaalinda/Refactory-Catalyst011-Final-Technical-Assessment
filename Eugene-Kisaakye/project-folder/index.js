@@ -13,7 +13,7 @@ mongoose.connect("mongodb://localhost:27017/work", () => {
 
 app.set
 
-app.get('/',(req,res) =>{
+router.get('/',(req,res) =>{
   res.sendFile('/Eugene-Kisaakye/project-folder/public/index.html')
 })
 
